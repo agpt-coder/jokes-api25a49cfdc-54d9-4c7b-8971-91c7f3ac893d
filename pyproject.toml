@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "jokes-api2"
+version = "0.1.0"
+description = "Based on our conversation and the information gathered, our project will involve creating a single API endpoint using FastAPI that returns one random dad joke. Here's a summary of the steps and best practices to employ in building this API:"
+authors = ["AutoGPT <info@agpt.co>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+fastapi = "^0.78.0"
+passlib = {version = "^1.7.4", extras = ["bcrypt"]}
+prisma = "*"
+pydantic = "*"
+python-jose = {version = "^3.3.0", extras = ["cryptography"]}
+uvicorn = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
