@@ -1,0 +1,15 @@
+name: Benchmarks Workflow
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  build-and-test:
+    if: github.event.issue.pull_request && contains(github.event.comment.body, '/benchmark')
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Say hello
+      run: echo "Hello, I work now"
