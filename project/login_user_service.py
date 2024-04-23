@@ -62,7 +62,7 @@ async def create_access_token(data: dict) -> str:
         data (dict): The payload data to encode in the token.
 
     Returns:
-        str: The encoded JWT token.
+        str: The encoded JWT token
     """
     encoded_jwt = jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
